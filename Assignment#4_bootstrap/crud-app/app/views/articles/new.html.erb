@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="new">
+		<div class="row">
+			<div class="row create">
+			 	<h2 class="label label-info">Create Article</h2>
+			</div>
+			<div class="row">
+			  <%=form_with scope: :article,
+			  	:html => {:class => "form-horizontal center"},url:create_article_path,local: true do |form| %>
+			  	<% if @article.errors.any? %>
+				    <div id="error_explanation">
+					    <h2>
+					      <%= pluralize(@article.errors.count, "error") %>
+					        	prohibited this article from being saved:
+					    </h2>
+					    <ul>
+						    <% @article.errors.full_messages.each do |msg| %>
+						      <li><%= msg %></li>
+						    <% end %>
+					    </ul>
+				    </div>
+			  	<% end %>
+			  	<p>
+			  		<%= form.label :name %>
+						<%= form.text_field :name, class: "form-control"%>
+					</p>
+					<p>
+						<%= form.label :description %> 
+						<%= form.text_area :description, :size => "30x6", class: "form-control"%>
+					</p>
+					<p>
+						<%= form.label :category %>
+						<%= form.select(:category_id,options_for_select([['Technology','Technology'],['Health','Health'],['Photography','Photography'],['Movies','Movies'],['Food','Food'],['Science','Science'],['Innovation','Innovation'],['Sports','Sports']]),{}, {:class => 'form-control text'})%>
+					</p>
+					<p>
+						<%= form.check_box :published %>
+						<%= form.label :published %>
+					</p>
+					<p>
+						<%= form.label :image %>
+						<%= form.file_field :image %>
+					</p>
+					<a href="/" class="btn btn-warning" style="margin-left:50px">back</a>
+					<%= form.submit "submit", class: "btn btn-success btn-sus" %>
+				<%end%>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+  

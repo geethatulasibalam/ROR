@@ -1,0 +1,32 @@
+<nav class='navbar fixed-top navbar-expand-lg navbar-light navbar-style'>
+	<ul class='navbar-nav mr-auto navbar-content'>
+    <li class='nav-item active'>
+      <a class='navbar-brand' href='#'> 
+				<%= image_tag ('/assets/logo.png') %>
+			</a>
+    </li>
+    <li class='nav-item dropdown'>
+      <%= link_to 'SELECT LOCATION','#', class: 'nav-link dropdown-toggle search-location', id: 'navbarDropdown', data:{toggle:'dropdown'}, aria:{expanded: true, haspopup: true} %>
+      <div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+        <div class='dropdown-item'> 
+        	<%= form_with model: @dish, method:'get', class: 'serach-location-form' do |form| %>
+						<%= text_field :loaction, nil, placeholder: 'location', id: 'name', class: 'input-style' %>
+						<%= button_tag type:'submit', class: 'location-search-btn' do %>
+							<%= image_tag ('/assets/search_icon.png') %>
+						<% end %>
+					<% end %>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class='nav-right'>
+	 	<ul>
+    	<li>
+  			<%= link_to 'CONTACT US','#' %> 
+  		</li>
+  		<li>
+  			<%= link_to 'SEARCH', '#' %>
+  		</li>
+		</ul>
+	</div>
+</nav>

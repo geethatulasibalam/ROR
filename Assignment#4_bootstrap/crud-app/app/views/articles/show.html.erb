@@ -1,0 +1,13 @@
+<div class="container show-article">
+ 	<div class="card">
+ 		<h3 class="text-center alert alert-success"><%= @article.name %></h3>
+ 		<div class="single-art-img">
+ 			<img src="<%= @article.image%>" class="card-img-top" alt="<%=@article.name%>"> 
+ 		</div>
+	  <div class="card-body">
+	  	<p class="card-text"><span>Category:</span><%=@article.category_id %></p>
+	  	<p class="card-text"><span>Description:</span><%= @article.description %></p>
+	  	<a href="/" class="btn btn-warning">back</a>
+	  </div>
+	</div>
+</div>

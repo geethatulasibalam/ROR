@@ -1,0 +1,92 @@
+<% provide :head_tags do %>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(<%=@place.latitude%>, <%=@place.longitude%>)
+    });
+    </script>
+<% end %>
+<div class="container-fluid">
+	<div class="navbar">
+		<div class="row">
+			<%= render "header" %>
+		</div>
+	</div>
+	<% if @dishes.blank? %>
+		<p class="search-result-row text-center" id="no-result">NO RESULT FOUND</p>
+	<% else %>
+		<div class="search-result-row">
+	 	 	<div class="row">
+	 	 	<div class="col-md-6 search-result-items">
+	 	 		<div class="row">
+	 	 			<div class="col-md-4">
+	 	 				<div class="row">
+	 	 					<div class="col-md-4">
+	 	 						<p class="filter-text">FILTER</p>
+	 	 					</div>
+	 	 					<div class="col-md-8">
+	 	 					<%= form_with model: @dish, local: true do |form| %>
+	 	 					 <%= select_tag("dishes_page", options_for_select([["RATING","rating"],["PRICE","price"]]), {prompt: 'SORT BY', :name => "dishes_per_page", :class=>"form-control sort", id:"filter", remote: true} ) %>
+	 	 					<% end %>
+	 	 					</div>
+	 	 				</div>
+	 	 			</div>
+	 	 			<div class="col-md-4">
+	 	 			 	<%= form_with model: @dish, local: true do |form| %>
+	 	 					<%= select_tag("dishes_page", options_for_select([["5+","5"],["7+","7"],["9+","9"]]), {prompt: 'ALL RATINGS', :name => "dishes_per_page", :class=>"form-control sort", id:"ratings", remote: true} ) %>
+	 	 				<% end %>
+	 	 			</div>
+	 	 			<div class="col-md-4">
+	 	 				<div class="dropdown" id="categoryfilter">
+						  <%= button_tag 'all dietary requirements', type: 'button', class: 'sort-btn',data:{toggle:'dropdown'}, aria:{expanded:false} %>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						    <ul>
+						    	<%= form_with model: @dish,local: true do |form| %>
+							    	<%= form.collection_check_boxes(:id, Category.all, :id, :name) do |e| %>
+		                <%= e.label class: "e-label" do %>
+		                  <%=e.check_box  class: "e-checkbox", checked:'false' %> 
+		                  <%=e.text%>
+		                <% end %>
+		             		<% end %>
+		             	<% end %>
+	              </ul>
+						  </div>
+						</div>
+	 	 			</div>	
+	 	 		</div>
+	 	 		<div class="row" style="margin-top: 10%;">
+		 	 		<div class="col-md-2 results">
+		 	 			Results 
+		 	 		</div>
+				 	<div class="col-md-10">
+			 	 		<div class="row">
+			 	 		<div class="col-md-1">
+			 	  	<span id="min-amount" class="fa fa-inr">0</span> 
+			 	 		</div>
+			 	 		<div class="col-md-9 slider">
+			 	 		<div id="range-slider"></div>
+			 	 		</div>
+			 	 		<span id="max-amount" class="fa fa-inr">1000</span> 
+			 	 			<%= form_with model: @dish, local: true do |form| %>
+								<%= form.hidden_field :min_rangefilter %>
+							  <%= form.hidden_field :max_rangefilter %>
+							<% end %>
+						</div>
+			 		</div>
+				</div>
+	 	 		<div class="searchlist" style="margin-top: 10%;">
+	 	 			<%= render 'searchlist', dishes: @dishes %>
+	 	 		</div>
+	 	 		</div>
+	 	 		<div class="col-md-6 map">
+	 	  		<div class="card">
+					  <div class="card-content">
+							<div id="map"></div>
+						</div>
+					</div>  
+	 	 		</div>
+		 	</div>
+	 	</div>
+ 	<% end %>
+</div>
+ 
+  

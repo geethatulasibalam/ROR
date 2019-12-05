@@ -1,0 +1,2 @@
+(window.$WP=window.$WP||[]).push({id:"social.share-cta",d:["vendor-react-libs","@ta/public.share-cta"],e:["./roots/social/share-cta/ShareCta.jsx"],x:{"./roots/social/share-cta/ShareCta.jsx":["default"]},m:{"./roots/social/share-cta/ShareCta.jsx":function(a,t,e){"use strict";e.r(t);var r=e("react-redux"),i=e("@ta/public.share-cta");t.default=Object(r.connect)(function(a){return{url:a.meta.initialAbsoluteUrl,itemType:a.meta.initialServletName,itemId:a.page.detailId||"0"}})(i.ShareCta)}}});
+//# sourceMappingURL=social.share-cta.3eaf3cec4e.js.map

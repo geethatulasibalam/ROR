@@ -1,0 +1,2 @@
+(window.$WP=window.$WP||[]).push({id:"@ta/trips.trip-types",e:["./packages/trips/trip-types/trip-types.jsx"],m:{"./packages/trips/trip-types/trip-types.jsx":function(p,t){}}});
+//# sourceMappingURL=trips.trip-types.cbc032a620.js.map

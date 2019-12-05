@@ -1,0 +1,2 @@
+(window.$WP=window.$WP||[]).push({id:"restaurants.location-hours",d:["@ta/public.location-hours"],e:["./roots/restaurants/location-hours/LocationHours.jsx"],x:{"./roots/restaurants/location-hours/LocationHours.jsx":["default"]},m:{"./roots/restaurants/location-hours/LocationHours.jsx":function(o,t,s){"use strict";s.r(t);var a=s("@ta/public.location-hours"),r=s.n(a);t.default=r.a}}});
+//# sourceMappingURL=restaurants.location-hours.7ccbef943a.js.map

@@ -1,0 +1,30 @@
+default: &default
+  adapter:  postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 8000
+
+development:
+  <<: *default
+  encoding: utf8
+  database:  foodfie_development
+  host: 127.0.0.1
+  username: postgres
+  password: postgres@92#
+
+   
+test:
+  <<: *default
+  database:  foodfie_test
+  host: 127.0.0.1
+  username: postgres
+  password: postgres@92#
+
+  
+production:
+  <<: *default
+  database:  foodfie_production
+  host: 127.0.0.1
+  username: postgres
+  password: postgres@92#
+
+  

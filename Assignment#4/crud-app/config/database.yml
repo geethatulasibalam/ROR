@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  encoding: utf8
+  database: crud_blog
+  host: 127.0.0.1
+  username: admin
+  password: root
+  socket: /tmp/mysql.soc
+
+test:
+  <<: *default
+  database: crud_blog
+
+production:
+  <<: *default
+  database: crud_blog

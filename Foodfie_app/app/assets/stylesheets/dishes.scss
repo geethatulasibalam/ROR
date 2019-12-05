@@ -1,0 +1,347 @@
+.navbar-style{
+  background-color: white;
+}
+.nav-right{
+  margin-top: 30px;
+  margin-right:120px;
+}
+.nav-right li{
+  display: inline-block;
+  list-style-type: none;
+}
+.nav-right li a{
+  font-size: 12px;
+  color: #babbbf;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-left:20px; 
+}
+.nav-right li a:hover{
+  text-decoration: none;
+}
+.dropdown-item:hover{
+  background-color: white;
+}
+.search-location{
+  font-family: "Lato",sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #7b90a2;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 2px solid #e1e1d0;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.serach-location-form{
+  border: 1px solid #babbbf;
+  padding: 5px;
+}
+.input-style{
+  border:none;
+  outline: none;
+}
+.search-location span{
+  color: #7b90a2;
+}
+.navbar-content{
+  margin-left: 90px;
+}
+.main-image{
+  position: relative;
+}
+.search-block{
+  top: 80px;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+.heading{
+  margin-top: 50px;
+  position: relative;
+}
+.top-dishes{
+  font-family: "Lato",sans-serif;
+  letter-spacing: 2px;
+  color: #7b90a2;
+  font-weight: bold;
+  font-size: 12px;
+}
+.dishes{
+  margin-bottom: 60px;
+}
+.dish-card{
+  margin-top:20px;
+  width: 100%;
+  overflow: hidden;
+}
+.dish-image{
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.dish-image:hover{
+  transform: scale(1.1);
+  transition: all .2s linear;
+ }
+.footer{
+  background-color:#f7aa97;
+  width: 100%;
+  height: 220px;
+  position: relative;
+  top: 40px;
+}
+.main-image{
+  text-align: center;
+  width: 100%;
+ }
+.footer-data{
+  font-family:'Playfair Display', serif;
+  font-size: 25px;
+  color: white;
+  margin-top:70px;
+ }
+.footer-imgs img{
+  width:130px;
+}
+.apple{
+  margin-right: 20px;
+}
+.phone-footer{
+  top: -40px;
+  left: 45%;
+  position: absolute;
+}
+.see-more{
+  margin-bottom: 60px;
+}
+.see-more-btn{
+  text-align: center;
+  background-color: white;
+  color: #6c757d;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border: 1px solid #6c757d;
+}
+.see-more-btn:hover{
+  background-color: #f7aa97;
+  color: white;
+}
+.main-image-info{
+  text-align: center;
+  color: white;
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  bottom:180px; 
+  width: 100%;
+}
+.main-image-info h1{
+  letter-spacing: 1.5px;
+}
+.search-form{
+  position: absolute;
+  background-color: white;
+  border:none;
+  border-radius: 5px;
+  padding: 10px;
+  left: 30%;
+  width:40%;
+  text-align: left;
+}
+#search-name{
+  width: 70%;
+  border:none;
+  outline: none;
+  text-indent: 20px;
+  font-family: "Lato",sans-serif;
+  color: #555555;
+}
+.search-btn{
+  padding: 4px;
+  background-color: white;
+  border: none;
+  border-left: 2px solid #e1e1d0;
+}
+.search-text{
+  color: #61dafb;
+  font-family: "Lato",sans-serif;
+  border:none;
+  background-color: white;
+}
+.search-text:hover{
+  text-decoration: none;
+  color: #61dafb;
+  cursor: pointer;
+}
+.search-btn span img{
+  margin:0px 10px;
+}
+.search-btn:hover{
+  cursor: pointer;
+}
+.location-search-btn{
+  border: none;
+  border-left: 2px solid #e1e1d0;
+  background-color: white;
+  padding-right:25px;
+}
+.map-marker{
+  border-right: 1px solid #7b90a2;
+  margin-right: 7px;
+  padding-right: 7px;
+  color: #7b90a2;
+}
+.location{
+ color: #7b90a2;
+ padding-bottom: 20px;
+}
+.price{
+  position: absolute;
+  bottom:100px;
+  right: 10%;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.dish-name{
+  position: absolute;
+  bottom:120px;
+  left: 10%;
+}
+.dish-name h1{
+  color: white;
+  font-size: 30px;
+  font-family: 'Playfair Display';
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.restaurant-name{
+  position: absolute;
+  bottom: 100px;
+  left: 10%;
+}
+.restaurant-name a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Lato",sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.rating{
+  position: absolute;
+  top:20px;
+  right:10%;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+ .pagination a:hover{
+  text-decoration: none;
+  color:#6C7A83;
+} 
+.search-result-items{
+  background-color: white;
+}
+.map{
+  background-color: white;
+}
+#map {
+  width: 100%;
+  height: 650px;
+}
+.filter-text{
+  margin-top: 5px;
+  color: #83929a;
+  font-size: 12px;
+  font-weight: bold;
+}
+.sort,.sort-btn{
+  color: #83929a;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.sort-btn{
+  background-color: white;
+  border: 1px solid #ced4da
+}
+.search-result-row{
+  margin-top: 8%;
+}
+.searchlist{
+  margin-top:10px;
+  height: 450px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.dish{
+  margin-top: 10%;
+}
+.dish-details{
+  font-size: 13px;
+}
+.dish-img img{
+  width: 100%;
+  height: 500px;
+}
+div.ui-slider-range.ui-widget-header {
+  background: #5ac7f9 !important;
+  position: relative;
+  height: 4px;
+  cursor: pointer;
+  width: 100%;
+  }
+.ui-silider{
+  position:relative;
+  text-align:left;
+}
+.ui-slider .ui-slider-handle{
+  position: absolute;
+  top:-5px;
+  cursor: pointer;
+  touch-action: none;
+  background: #5ac7f9 !important;
+  border-radius: 100%;
+  height:13px;
+  outline-color:none;
+  width:15px;
+}
+#range-slider.ui-slider-horizontal {
+  top: 0.5em;
+  height: 4px;
+  order: none;
+  background: #ccc;
+  width: 100%;
+}
+#max-amount {
+  margin-left: 28px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #83929a;
+  font-weight: bold;
+}
+#min-amount {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #83929a;
+  font-weight: bold;
+}
+.results{
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #83929a;
+  font-weight: bold;
+}
+.sort-btn{
+  padding:10px 5px;
+}
+.slider{
+  padding-right: 0px;
+}

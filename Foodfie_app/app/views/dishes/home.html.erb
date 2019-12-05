@@ -1,0 +1,53 @@
+<div class='container-fulid'>
+	<div class='row'>
+		<%= render 'header' %>
+	</div>
+	<div class='main-image'>
+ 		<%= image_tag ('/assets/background.png'), class: 'img-fluid search-block'%>
+ 	 	<div class='main-image-info'>
+	 		<h1>What do you <em>really</em> feel like?</h1>
+	 		<div class='search-form'>
+		 		<%= form_tag('/dishes/search', method: 'get') do |form| %>
+				  <%= text_field_tag :q,nil,placeholder: 'Chips and burgers',
+				   id: 'search-name',name: 'search',data:{search:}%>
+				  <span class='search-btn'><%= image_tag ('/assets/search_icon.png') %></span>
+				  <%= submit_tag('Search', {class: 'search-text'}) %>
+				<% end %>
+		 	</div>
+ 		</div>
+ 	</div>
+	<div class='heading'>
+ 		<p class='top-dishes' align='center'>TOP RATED DISHES</p>
+ 	</div>
+ 	<div class='dishes'> 
+		<%= render 'disheslist', dishes: @dishes %>
+	</div>
+ 	<div class='see-more text-center'>
+ 		<%= button_tag 'SEE MORE', type: 'button', class: 'btn btn-light see-more-btn' %>
+ 	</div>
+	<div class='footer'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6'>
+					<h3 class='footer-data'>Do more with the app. Download it today!</h3>
+					<div class='row'>
+						<div class='col-md-2 footer-imgs'>
+							<%= link_to '#' do %>
+								<%= image_tag ('/assets/googleplaystore.png') %>
+							<% end %>
+						</div>
+						<div class='col-md-1'></div>
+						<div class='col-md-2 footer-imgs apple'>
+							<%= link_to '#' do %>
+								<%= image_tag ('/assets/applestore.png') %>
+							<% end %>
+						</div>
+					</div>
+				</div>
+				<div class='col-md-6 phone-footer text-right'>
+				 	<%= image_tag ('/assets/phone-footer.png') %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

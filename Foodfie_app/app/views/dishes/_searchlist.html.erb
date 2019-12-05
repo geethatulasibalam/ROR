@@ -1,0 +1,36 @@
+<% if @dishes.blank? %>
+	<p class='search-result-row text-center'>NO RESULT FOUND</p>
+<% else %>
+	<div class='dishes'> 
+		<div class='container'>
+			<div class='row'>
+				<% dishes.each do |dish| %>
+					<div class='col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+					  <div class='card dish-card'>
+						  <%= link_to  dish_path(dish) do %>
+						  	<% dish.images.each do |dishimage| %>
+									<%= image_tag dishimage.image.to_s, class: 'dish-image' %>
+								<% end %>
+							<% end %>
+							<div class='dish-name'><h1><%= dish.name %></h1></div>
+						 	<div class='restaurant-name'>
+						 		<h4><a href='#'><%= dish.restaurants.first.name %></a></h4>
+						 	</div>
+						 	<div class='rating'>
+						 		<%= image_tag ('/assets/heart.png'), class: 'rating-img' %>
+						 		<span>
+							 		<%=	rating(dish.ratings) %>
+							 	</span>
+						 	</div>
+							<div class='price'>&#8377;<%= dish.price %></div>
+						  <div class='card-body'>
+						    <p class='card-text location'><span class='map-marker'><i class='fa fa-map-marker'></i></span><%= dish.restaurants.first.address  %></p>
+						  </div>
+						</div>
+			 		</div>
+			 	<% end %>
+		 	</div>
+		</div>
+	</div>
+<% end %>
+ 
