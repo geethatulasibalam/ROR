@@ -1,4 +1,0 @@
-$(document).ready(function(){
-	$("body").before("<%= escape_javascript render(:partial=>'dish',:locals => { :dish => @dish})%>");
-	$("#dish-<%= @dish.id %>").modal();
-})
