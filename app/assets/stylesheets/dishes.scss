@@ -1,0 +1,84 @@
+.dish-card{
+  margin-top:20px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.dish-image{
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+.dishes{
+	margin-top:120px;
+}
+.dish-details{
+	position: absolute;
+	color:white;
+	font-style: 1.5rem;
+	font-family: helvetica;
+	letter-spacing: 1px;
+	line-height: 3px;
+	bottom:140px;
+}
+.dish-name{
+	text-transform: capitalize;
+	left:30px;
+}
+.dish-price{
+	right: 30px;
+	font-weight: 800;
+}
+.dish-description{
+	color: #7b90a2;
+ 	padding-bottom: 20px;
+ 	justify-content: center;
+}
+.homepage-dish-description{
+	width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.form-container{
+	padding: 20px;
+	margin-top: 40px;
+	width:50%;
+	border: 1px solid #BFBFBF;
+	border-radius: 4px;
+  background-color: white;
+	box-shadow: 8px 6px rgba(0,0,0,0.03);
+}
+.dish-form{
+	margin-top: 20px;
+}
+.create-text{
+	font-family: cursive;
+	font-stretch: 2px;
+	color:#CD5C5C;
+}
+.nav{
+	padding: 20px 80px;
+	background-color:#544a7d;
+}
+.footer {
+	width: 100%;
+	height: 60px;
+  background: #222222 none repeat scroll 0 0;
+  border-top: 4px solid #fcab0e;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.footer p {
+  color: #fff;
+  font-size: 22px;
+  line-height: 20px;
+}
+.dish{
+	margin-top:10%;
+}
+.dish-image:hover{
+  transform: scale(1.1);
+  transition: all .2s linear;
+ }

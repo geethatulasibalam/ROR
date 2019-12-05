@@ -1,0 +1,19 @@
+<div class="container">  
+  <nav class="navbar navbar-expand-lg fixed-top nav">
+    <div class="navbar-nav mr-auto">
+     <%= link_to 'Post dish', new_dish_path,class: " btn btn-sm btn-warning navbar-brand",remote: true %>
+    </div>
+    <div class="navbar-nav ml-auto user-buttons">
+      <% if  user_signed_in? %>
+        <%= link_to "Signout", destroy_user_session_path, method: :delete, class: "btn btn-sm btn-danger btn-create navbar-brand mr-auto" %>
+        <% else %>
+          <%= link_to 'Signin', new_user_session_path, class: 'btn btn-sm btn-primary' %>
+      <% end %>  
+    </div>
+  </nav>
+  <div class="row">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+</div> 
